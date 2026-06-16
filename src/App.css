@@ -1,9 +1,37 @@
 @import "tailwindcss";
 
+/* ========================================
+   DESIGN TOKENS
+======================================== */
+
 @theme {
-  --color-cream: #F5F1E8;
-  --color-jungle: #0F3D2E;
-  --color-charcoal: #2B2B2B;
+  --color-cream: #f5f1e8;
+  --color-jungle: #0f3d2e;
+  --color-charcoal: #2b2b2b;
+  --color-light-gray: #f8f8f8;
+  --color-border: #e8e5df;
 
   --max-width-content: 1440px;
+}
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: Inter, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }

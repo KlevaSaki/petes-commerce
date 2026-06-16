@@ -1,10 +1,22 @@
-function App() {
+import { Outlet } from "react-router-dom";
 
+import Footer from "../src/components/layout/Footer";
+import Navbar from "../src/components/layout/Navbar.tsx";
+
+/**
+ * Shared Site Layout
+ */
+
+export default function App() {
   return (
     <>
-    <h1 className="bg-cream text-jungle">Peters eCommerce App</h1>
-    </>
-  )
-}
+      <Navbar />
 
-export default App
+      <main>
+        <Outlet />
+      </main>
+
+      <Footer />
+    </>
+  );
+}
