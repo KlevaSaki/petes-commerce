@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #F5F1E8;
+  --color-jungle: #0F3D2E;
+  --color-charcoal: #2B2B2B;
+
+  --max-width-content: 1440px;
+}
