@@ -31,16 +31,16 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-cream/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-border bg-jungle/95 backdrop-blur-sm">
       <Container>
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
 
           <Link
             to="/"
-            className="text-xl font-semibold tracking-[0.25rem] text-jungle"
+            className="text-xl font-semibold tracking-[0.25rem] text-cream"
           >
-            BRAND
+            MAURICE.INC
           </Link>
 
           {/* Desktop Navigation */}
@@ -71,7 +71,7 @@ export default function Navbar() {
             onClick={() => setIsOpen((prev) => !prev)}
             className="md:hidden"
           >
-            {isOpen ? <X /> : <Menu />}
+            {isOpen ? <X className="text-cream" /> : <Menu className="text-cream" />}
           </button>
         </div>
       </Container>

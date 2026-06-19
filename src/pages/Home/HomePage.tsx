@@ -1,9 +1,23 @@
-import React from 'react'
+import Container from "../../components/layout/Container";
+import Hero from "../../components/home/Hero";
+import FeaturedCollections from "../../components/home/FeaturedCollections";
+import ProductGrid from "../../components/product/ProductGrid";
 
-const HomePage = () => {
+import { products } from "../../data/products";
+
+export default function HomePage() {
   return (
-    <div>HomePage</div>
-  )
-}
+    <>
+      <Hero />
 
-export default HomePage
+      <Container>
+        <FeaturedCollections />
+
+        <ProductGrid
+          title="New Arrivals"
+          products={products}
+        />
+      </Container>
+    </>
+  );
+}
