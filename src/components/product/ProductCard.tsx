@@ -88,13 +88,20 @@ export default function ProductCard({
       {/* Content Section */}
 
       <div className="p-5">
-        <div className="flex items-start justify-between gap-4">
-          <div>
+        <div className="flex
+        flex-col
+        gap-3
+        sm:flex-row
+        sm:items-start
+        sm:justify-between">
+          <div className="min-w-0">
             <h3
               className="
-                text-base
+                line-clamp-2
+                text-sm
                 font-medium
                 text-charcoal
+                sm:text-base
               "
             >
               {product.name}
@@ -107,14 +114,18 @@ export default function ProductCard({
 
           <div
             className="
+              self-start
               rounded-full
               bg-jungle/8
-              px-3
-              py-2
-              text-sm
+              px-2.5
+              py-1.5
+              text-xs
               font-semibold
               text-jungle
               whitespace-nowrap
+              sm:px-3
+              sm:py-2
+              sm:text-sm
             "
           >
             KES {product.price.toLocaleString()}
@@ -127,8 +138,11 @@ export default function ProductCard({
           className="
             mt-5
             flex
-            items-center
-            justify-between
+            flex-col
+            gap-3
+            sm:flex-row
+            sm:items-center
+            sm:justify-between
           "
         >
           <span
