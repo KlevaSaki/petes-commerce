@@ -147,7 +147,7 @@ export default function Hero() {
               "
             >
               <img
-                src="\src\gallery\WhatsApp Image 2026-06-29 at 11.09.06 (1).jpeg"
+                src="../../src/gallery/image1.jpeg"
                 alt="Luxury Fashion"
                 className="
                   h-[600px]
