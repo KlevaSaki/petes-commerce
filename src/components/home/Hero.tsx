@@ -147,7 +147,7 @@ export default function Hero() {
               "
             >
               <img
-                src="https://images.unsplash.com/photo-1683084461473-c521974b2544?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGJsYWNrJTIwbWFsZSUyMG1vZGVsfGVufDB8fDB8fHww"
+                src="src\gallery\WhatsApp Image 2026-06-29 at 11.09.06 (1).jpeg"
                 alt="Luxury Fashion"
                 className="
                   h-[600px]
