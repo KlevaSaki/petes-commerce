@@ -147,7 +147,7 @@ export default function Hero() {
               "
             >
               <img
-                src="../../src/gallery/image1.jpeg"
+                src="src\gallery\image1.jpeg"
                 alt="Luxury Fashion"
                 className="
                   h-[600px]
