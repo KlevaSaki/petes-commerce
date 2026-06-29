@@ -60,7 +60,7 @@ export default function Navbar() {
 
             <span
               className="
-                -mt-1
+                -mt-0.5
                 text-[0.55rem]
                 uppercase
                 tracking-[0.65rem]
