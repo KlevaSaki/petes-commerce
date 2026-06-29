@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
-import image2 from "../../gallery/image2.jpeg";
-import image3 from "../../gallery/image3.jpeg";
+import image17 from "../../gallery/image17.jpeg";
+import image10 from "../../gallery/image10.jpeg";
 import image4 from "../../gallery/image4.jpeg";
 
 /**
@@ -12,13 +12,13 @@ const collections = [
     id: 1,
     title: "Menswear",
     description: "Tailored essentials crafted for timeless style.",
-    image:image2,
+    image:image17,
   },
   {
     id: 2,
     title: "Womenswear",
     description: "Modern silhouettes designed with elegance.",
-    image:image3,
+    image:image10,
   },
   {
     id: 3,

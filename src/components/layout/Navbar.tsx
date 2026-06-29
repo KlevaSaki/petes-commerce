@@ -36,16 +36,46 @@ export default function Navbar() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
 
-          <Link
+          {/* <Link
             to="/"
             className="text-xl font-semibold tracking-[0.25rem] text-cream"
           >
-            MAURICE.INC
+            LUXE DISTRICT
+          </Link> */}
+
+          <Link
+            to="/"
+            className="flex flex-col items-center leading-none text-cream select-none"
+          >
+            <span
+              className="
+                font-serif
+                text-[2rem]
+                font-light
+                tracking-[0.35rem]
+              "
+            >
+              LUXE
+            </span>
+
+            <span
+              className="
+                -mt-1
+                text-[0.55rem]
+                uppercase
+                tracking-[0.65rem]
+                font-light
+                opacity-80
+                whitespace-nowrap
+              "
+            >
+              DISTRICT
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
 
-          <nav className="hidden gap-10 md:flex">
+          <nav className="hidden gap-10 md:flex text-cream text-xs">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -59,7 +89,7 @@ export default function Navbar() {
 
           {/* Desktop Actions */}
 
-          <div className="hidden items-center gap-4 md:flex">
+          <div className="hidden items-center gap-4 md:flex text-cream cursor-pointer">
             <User size={20} />
 
             <ShoppingBag size={20} />
