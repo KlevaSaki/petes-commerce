@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import image1 from "../../gallery/image1.jpeg";
 
 /**
  * Homepage Hero
@@ -147,7 +148,7 @@ export default function Hero() {
               "
             >
               <img
-                src="src\gallery\image1.jpeg"
+                src={image1}
                 alt="Luxury Fashion"
                 className="
                   h-[600px]
