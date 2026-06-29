@@ -129,7 +129,7 @@ export default function Footer() {
                 tracking-[0.3rem]
               "
             >
-              MAURICE.INC
+              LUXE DISTRICT
             </h3>
 
             <p
