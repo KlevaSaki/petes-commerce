@@ -1,4 +1,7 @@
 import { ArrowRight } from "lucide-react";
+import image2 from "../../gallery/image2.jpeg";
+import image3 from "../../gallery/image3.jpeg";
+import image4 from "../../gallery/image4.jpeg";
 
 /**
  * Featured Collections
@@ -9,28 +12,25 @@ const collections = [
     id: 1,
     title: "Menswear",
     description: "Tailored essentials crafted for timeless style.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1727942419715-22d86baf8120?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fGJsYWNrJTIwbWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
+    image:image2,
   },
   {
     id: 2,
     title: "Womenswear",
     description: "Modern silhouettes designed with elegance.",
-    image:
-      "https://images.unsplash.com/photo-1747321754355-8c8bdfac12b4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODB8fGZlbWFsZSUyMGNsb3RoZXN8ZW58MHx8MHx8fDA%3D",
+    image:image3,
   },
   {
     id: 3,
     title: "Accessories",
     description: "Refined finishing touches for every occasion.",
-    image:
-      "https://images.unsplash.com/photo-1779040623350-dfae823cc734?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHVyYmFuJTIwYWNjZXNzb3JpZXN8ZW58MHx8MHx8fDA%3D",
-  },
+    image:image4
+  }
 ];
 
 export default function FeaturedCollections() {
   return (
-    <section className="rounded-[20px] px-4 bg-gradient-to-b from-cream to-white py-12">
+    <section className="rounded-[20px] px-4 bg-linear-to-b from-cream to-white py-12">
       <section className="py-28">
       {/* Section Header */}
 
@@ -104,7 +104,7 @@ export default function FeaturedCollections() {
             "
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
 
           <div
             className="
