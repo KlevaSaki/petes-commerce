@@ -124,7 +124,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3
               className="
-                text-5xl
+                text-4xl
                 font-light
                 tracking-[0.3rem]
               "
