@@ -1,5 +1,6 @@
 import ProductCard from "./ProductCard";
 import type { Product } from "../../types/product";
+import { ArrowDown } from "lucide-react";
 
 interface ProductGridProps {
   title: string;
@@ -11,7 +12,7 @@ export default function ProductGrid({
   products,
 }: ProductGridProps) {
   return (
-    <section className="py-24">
+    <section className="py-8">
       {/* Section Header */}
 
       <div className="mb-14">
@@ -56,6 +57,46 @@ export default function ProductGrid({
             product={product}
           />
         ))}
+      </div>
+
+       <div className="mt-16 flex justify-center">
+        <button
+          className="
+            group
+            inline-flex
+            items-center
+            gap-3
+            rounded-full
+            border
+            border-neutral-300
+            bg-white
+            px-8
+            py-4
+            text-sm
+            font-medium
+            tracking-wide
+            text-neutral-900
+            shadow-sm
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:border-jungle
+            hover:bg-jungle
+            hover:text-white
+            hover:shadow-lg
+          "
+        >
+          <span>Load More</span>
+
+          <ArrowDown
+            size={18}
+            className="
+              transition-transform
+              duration-300
+              group-hover:translate-y-1
+            "
+          />
+        </button>
       </div>
     </section>
   );
