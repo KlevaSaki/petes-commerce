@@ -1,12 +1,12 @@
-import CollectionHero from "../components/shop/CollectionHero";
-import FilterBar from "../components/shop/FilterBar";
-import CategoryCards from "../components/shop/CategoryCards";
-import ProductGrid from "../components/products/ProductGrid";
-import PromoBanner from "../components/shop/PromoBanner";
-import Newsletter from "../components/shop/Newsletter";
-import RecentlyViewed from "../components/shop/RecentlyViewed";
+import CollectionHero from "../../components/shop/CollectionHero";
+import FilterBar from "../../components/shop/FilterBar";
+import CategoryCards from "../../components/shop/CategoryCards";
+import ProductGrid from "../../components/product/ProductGrid";
+import PromoBanner from "../../components/shop/PromoBanner";
+import Newsletter from "../../components/shop/Newsletter";
+import RecentlyViewed from "../../components/shop/RecentlyViewed";
 
-import { products } from "../data/products";
+import { products } from "../../data/products";
 
 /**
  * Shop Collection Page
