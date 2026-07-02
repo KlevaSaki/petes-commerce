@@ -50,7 +50,7 @@ export default function Navbar() {
             <span
               className="
                 font-serif
-                text-[2rem]
+                text-[1.2rem]
                 font-light
                 tracking-[0.35rem]
               "
@@ -60,10 +60,10 @@ export default function Navbar() {
 
             <span
               className="
-                -mt-0.5
+                -mt-0.1
                 text-[0.55rem]
                 uppercase
-                tracking-[0.65rem]
+                tracking-[0.5rem]
                 font-light
                 opacity-80
                 whitespace-nowrap

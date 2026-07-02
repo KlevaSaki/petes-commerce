@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import image9 from "../../gallery/image9.jpeg";
+import image9 from "../../gallery/ChatGPT Image Jul 2, 2026, 12_18_03 PM.png";
 
 /**
  * Homepage Hero
@@ -132,9 +132,7 @@ export default function Hero() {
 
                 <ArrowRight size={18} />
               </button>
-
             </div>
-
           </div>
 
           {/* RIGHT IMAGE */}
@@ -142,6 +140,8 @@ export default function Hero() {
           <div className="relative">
             <div
               className="
+                aspect-[4/5]
+                w-full
                 overflow-hidden
                 rounded-[40px]
                 bg-jungle
@@ -151,9 +151,10 @@ export default function Hero() {
                 src={image9}
                 alt="Luxury Fashion"
                 className="
-                  h-[600px]
+                  h-full
                   w-full
                   object-cover
+                  object-center
                 "
               />
             </div>

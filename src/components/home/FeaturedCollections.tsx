@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
-import image17 from "../../gallery/image17.jpeg";
-import image10 from "../../gallery/image10.jpeg";
-import image4 from "../../gallery/image4.jpeg";
+import image17 from "../../gallery/ChatGPT Image Jul 2, 2026, 12_23_01 PM.png";
+import image23 from "../../gallery/womens cloth.png";
+import image4 from "../../gallery/accessories.jpg";
 
 /**
  * Featured Collections
@@ -12,245 +12,250 @@ const collections = [
     id: 1,
     title: "Menswear",
     description: "Tailored essentials crafted for timeless style.",
-    image:image17,
+    image: image17,
   },
   {
     id: 2,
     title: "Womenswear",
     description: "Modern silhouettes designed with elegance.",
-    image:image10,
+    image: image23,
   },
   {
     id: 3,
     title: "Accessories",
     description: "Refined finishing touches for every occasion.",
-    image:image4
-  }
+    image: image4,
+  },
 ];
 
 export default function FeaturedCollections() {
   return (
-    <section className="rounded-[20px] px-4 bg-linear-to-b from-cream to-white py-12">
+    <section className="rounded-[20px] bg-linear-to-b from-cream to-white px-4 py-12">
       <section className="py-28">
-      {/* Section Header */}
+        {/* Section Header */}
 
-      <div className="mb-16 text-center">
-        <span
-          className="
-            text-xs
-            uppercase
-            tracking-[0.25rem]
-            text-jungle
-          "
-        >
-          Curated Collections
-        </span>
-
-        <h2
-          className="
-            mt-4
-            text-4xl
-            md:text-6xl
-            font-light
-            tracking-tight
-          "
-        >
-          Discover Your Style
-        </h2>
-
-        <p
-          className="
-            mx-auto
-            mt-6
-            max-w-2xl
-            text-neutral-500
-          "
-        >
-          Carefully selected collections designed
-          to blend luxury, versatility and timeless appeal.
-        </p>
-      </div>
-
-      {/* Layout */}
-
-      <div
-        className="
-          grid
-          gap-6
-          lg:grid-cols-3
-        "
-      >
-        {/* Large Collection */}
-
-        <article
-          className="
-            group
-            relative
-            overflow-hidden
-            rounded-[32px]
-            lg:col-span-2
-          "
-        >
-          <img
-            src={collections[0].image}
-            alt={collections[0].title}
+        <div className="mb-16 text-center">
+          <span
             className="
-              h-[650px]
-              w-full
-              object-cover
-              transition-transform
-              duration-700
-              group-hover:scale-105
-            "
-          />
-
-          <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
-
-          <div
-            className="
-              absolute
-              bottom-0
-              left-0
-              p-8
-              md:p-10
-              text-white
+              text-xs
+              uppercase
+              tracking-[0.25rem]
+              text-jungle
             "
           >
-            <span
-              className="
-                rounded-full
-                bg-white/15
-                px-4
-                py-2
-                text-xs
-                uppercase
-                tracking-[0.2rem]
-                backdrop-blur-md
-              "
-            >
-              Featured
-            </span>
+            Curated Collections
+          </span>
 
-            <h3
-              className="
-                mt-5
-                text-4xl
-                md:text-5xl
-                font-light
-              "
-            >
-              {collections[0].title}
-            </h3>
+          <h2
+            className="
+              mt-4
+              text-4xl
+              font-light
+              tracking-tight
+              md:text-6xl
+            "
+          >
+            Discover Your Style
+          </h2>
 
-            <p className="mt-4 max-w-md text-white/80">
-              {collections[0].description}
-            </p>
+          <p
+            className="
+              mx-auto
+              mt-6
+              max-w-2xl
+              text-neutral-500
+            "
+          >
+            Carefully selected collections designed to blend luxury,
+            versatility and timeless appeal.
+          </p>
+        </div>
 
-            <button
-              className="
-                mt-6
-                flex
-                items-center
-                gap-2
-                rounded-full
-                bg-jungle
-                px-6
-                py-3
-                text-sm
-                font-medium
-                transition
-                hover:opacity-90
-              "
-            >
-              Explore Collection
-              <ArrowRight size={18} />
-            </button>
-          </div>
-        </article>
+        {/* Layout */}
 
-        {/* Right Column */}
+        <div
+          className="
+            grid
+            gap-6
+            lg:grid-cols-3
+          "
+        >
+          {/* Large Collection */}
 
-        <div className="flex flex-col gap-6">
-          {collections.slice(1).map((collection) => (
-            <article
-              key={collection.id}
-              className="
-                group
-                relative
-                overflow-hidden
-                rounded-[32px]
-              "
-            >
+          <article
+            className="
+              group
+              relative
+              overflow-hidden
+              rounded-[32px]
+              lg:col-span-2
+            "
+          >
+            <div className="h-[650px] w-full overflow-hidden">
               <img
-                src={collection.image}
-                alt={collection.title}
+                src={collections[0].image}
+                alt={collections[0].title}
                 className="
-                  h-[312px]
+                  h-full
                   w-full
-                  object-cover
+                  object-contain
+                  object-center
                   transition-transform
                   duration-700
                   group-hover:scale-105
                 "
               />
+            </div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
 
-              <div
+            <div
+              className="
+                absolute
+                bottom-0
+                left-0
+                p-8
+                text-white
+                md:p-10
+              "
+            >
+              <span
                 className="
-                  absolute
-                  bottom-0
-                  left-0
-                  right-0
-                  p-6
-                  text-white
+                  rounded-full
+                  bg-white/15
+                  px-4
+                  py-2
+                  text-xs
+                  uppercase
+                  tracking-[0.2rem]
+                  backdrop-blur-md
                 "
               >
-                <h3
-                  className="
-                    text-2xl
-                    font-light
-                  "
-                >
-                  {collection.title}
-                </h3>
+                Featured
+              </span>
 
-                <p
-                  className="
-                    mt-2
-                    text-sm
-                    text-white/80
-                  "
-                >
-                  {collection.description}
-                </p>
+              <h3
+                className="
+                  mt-5
+                  text-4xl
+                  font-light
+                  md:text-5xl
+                "
+              >
+                {collections[0].title}
+              </h3>
 
-                <div
-                  className="
-                    mt-4
-                    inline-flex
-                    items-center
-                    gap-2
-                    text-sm
-                    font-medium
-                  "
-                >
-                  Explore
-                  <ArrowRight
-                    size={16}
+              <p className="mt-4 max-w-md text-white/80">
+                {collections[0].description}
+              </p>
+
+              <button
+                className="
+                  mt-6
+                  flex
+                  items-center
+                  gap-2
+                  rounded-full
+                  bg-jungle
+                  px-6
+                  py-3
+                  text-sm
+                  font-medium
+                  transition
+                  hover:opacity-90
+                "
+              >
+                Explore Collection
+                <ArrowRight size={18} />
+              </button>
+            </div>
+          </article>
+
+          {/* Right Column */}
+
+          <div className="flex flex-col gap-6">
+            {collections.slice(1).map((collection) => (
+              <article
+                key={collection.id}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-[32px]
+                "
+              >
+                <div className="h-[312px] w-full overflow-hidden">
+                  <img
+                    src={collection.image}
+                    alt={collection.title}
                     className="
+                      h-full
+                      w-full
+                      object-cover
+                      object-center
                       transition-transform
-                      group-hover:translate-x-1
+                      duration-700
+                      group-hover:scale-105
                     "
                   />
                 </div>
-              </div>
-            </article>
-          ))}
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+
+                <div
+                  className="
+                    absolute
+                    bottom-0
+                    left-0
+                    right-0
+                    p-6
+                    text-white
+                  "
+                >
+                  <h3
+                    className="
+                      text-2xl
+                      font-light
+                    "
+                  >
+                    {collection.title}
+                  </h3>
+
+                  <p
+                    className="
+                      mt-2
+                      text-sm
+                      text-white/80
+                    "
+                  >
+                    {collection.description}
+                  </p>
+
+                  <div
+                    className="
+                      mt-4
+                      inline-flex
+                      items-center
+                      gap-2
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    Explore
+                    <ArrowRight
+                      size={16}
+                      className="
+                        transition-transform
+                        group-hover:translate-x-1
+                      "
+                    />
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
       </section>
     </section>
-    
   );
 }
