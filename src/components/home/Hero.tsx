@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import image9 from "../../gallery/ChatGPT Image Jul 2, 2026, 12_18_03 PM.png";
 
@@ -113,25 +114,27 @@ export default function Hero() {
                 sm:flex-row
               "
             >
-              <button
-                className="
-                  flex
-                  items-center
-                  justify-center
-                  gap-2
-                  rounded-full
-                  bg-jungle
-                  px-8
-                  py-4
-                  text-white
-                  transition
-                  hover:scale-[1.02]
-                "
-              >
-                Shop Collection
+              <Link to="/shop-collection">
+                    <button
+                      className="
+                        flex
+                        items-center
+                        justify-center
+                        gap-2
+                        rounded-full
+                        bg-jungle
+                        px-8
+                        py-4
+                        text-white
+                        transition
+                        hover:scale-[1.02]
+                      "
+                    >
+                      Shop Collection
 
-                <ArrowRight size={18} />
-              </button>
+                      <ArrowRight size={18} />
+                    </button>
+              </Link>
             </div>
           </div>
 
