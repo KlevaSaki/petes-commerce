@@ -45,7 +45,7 @@ export default function Navbar() {
 
           <Link
             to="/"
-            className="flex flex-col items-center leading-none text-cream select-none"
+            className="flex flex-col items-center leading-none text-orange-400 select-none"
           >
             <span
               className="
@@ -75,7 +75,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
 
-          <nav className="hidden gap-10 md:flex text-cream text-xs">
+          <nav className="hidden gap-10 md:flex text-orange-400 text-xs">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -89,7 +89,7 @@ export default function Navbar() {
 
           {/* Desktop Actions */}
 
-          <div className="hidden items-center gap-4 md:flex text-cream cursor-pointer">
+          <div className="hidden items-center gap-4 md:flex text-orange-400 cursor-pointer">
             <User size={20} />
 
             <ShoppingBag size={20} />
@@ -101,7 +101,7 @@ export default function Navbar() {
             onClick={() => setIsOpen((prev) => !prev)}
             className="md:hidden"
           >
-            {isOpen ? <X className="text-cream" /> : <Menu className="text-cream" />}
+            {isOpen ? <X className="text-cream" /> : <Menu className="text-orange-400" />}
           </button>
         </div>
       </Container>
