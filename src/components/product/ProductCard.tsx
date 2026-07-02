@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Heart, ShoppingBag } from "lucide-react";
 import type { Product } from "../../types/product";
 
@@ -8,6 +9,8 @@ interface ProductCardProps {
 export default function ProductCard({
   product,
 }: ProductCardProps) {
+  const [isLiked, setIsLiked] = useState(false);
+
   return (
     <article
       className="
@@ -65,6 +68,8 @@ export default function ProductCard({
         {/* Wishlist */}
 
         <button
+          onClick={() => setIsLiked(!isLiked)}
+          aria-label={isLiked ? "Remove from wishlist" : "Add to wishlist"}
           className="
             absolute
             right-4
@@ -77,23 +82,41 @@ export default function ProductCard({
             rounded-full
             bg-white/90
             backdrop-blur-md
-            transition
+            transition-all
+            duration-300
             hover:bg-white
+            hover:scale-110
+            active:scale-95
           "
         >
-          <Heart size={18} />
+          <Heart
+            size={18}
+            className={`
+              transition-all
+              duration-300
+              ${
+                isLiked
+                  ? "fill-orange-400 text-orange-400 scale-110"
+                  : "text-neutral-700"
+              }
+            `}
+          />
         </button>
       </div>
 
       {/* Content Section */}
 
       <div className="p-5">
-        <div className="flex
-        flex-col
-        gap-3
-        sm:flex-row
-        sm:items-start
-        sm:justify-between">
+        <div
+          className="
+            flex
+            flex-col
+            gap-3
+            sm:flex-row
+            sm:items-start
+            sm:justify-between
+          "
+        >
           <div className="min-w-0">
             <h3
               className="
@@ -115,6 +138,7 @@ export default function ProductCard({
           <div
             className="
               self-start
+              whitespace-nowrap
               rounded-full
               bg-jungle/8
               px-2.5
@@ -122,7 +146,6 @@ export default function ProductCard({
               text-xs
               font-semibold
               text-jungle
-              whitespace-nowrap
               sm:px-3
               sm:py-2
               sm:text-sm
