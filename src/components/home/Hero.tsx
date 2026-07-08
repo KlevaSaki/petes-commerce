@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import image9 from "../../gallery/ChatGPT Image Jul 2, 2026, 12_18_03 PM.png";
+import image9 from "../../gallery/mens/ChatGPT Image Jul 2, 2026, 12_18_03 PM.png";
 
 /**
  * Homepage Hero

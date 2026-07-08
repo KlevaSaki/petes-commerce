@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import image20 from "../../gallery/image20.jpeg";
+import image20 from "../../gallery/mens/image20.jpeg";
 
 export default function MensCollectionHero() {
   return (

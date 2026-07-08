@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import bannerImage from "../../gallery/ChatGPT Image Jul 2, 2026, 12_18_03 PM.png";
+import bannerImage from "../../gallery/mens/ChatGPT Image Jul 2, 2026, 12_18_03 PM.png";
 
 /**
  * Promotional Banner

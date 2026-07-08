@@ -7,9 +7,9 @@ import {
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import image17 from "../../gallery/ChatGPT Image Jul 2, 2026, 12_23_01 PM.png";
-import image23 from "../../gallery/womens cloth.png";
-import image4 from "../../gallery/accessories.jpg";
+import image17 from "../../gallery/mens/ChatGPT Image Jul 2, 2026, 12_23_01 PM.png";
+import image23 from "../../gallery/womens/womens cloth.png";
+import image4 from "../../gallery/accessories/accessories.jpg";
 
 /**
  * Featured Collections

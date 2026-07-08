@@ -1,5 +1,5 @@
 // import { ArrowRight } from "lucide-react";
-import heroImage from "../../gallery/ChatGPT Image Jul 2, 2026, 12_18_03 PM.png";
+import heroImage from "../../gallery/mens/ChatGPT Image Jul 2, 2026, 12_18_03 PM.png";
 
 /**
  * Collection Hero

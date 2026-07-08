@@ -1,5 +1,6 @@
 export interface Product {
   id: string;
+  slug: string;
   name: string;
   price: number;
   image: string;
@@ -14,7 +15,7 @@ export interface Product {
 
   size?: string[];
 
-  isNew?: boolean;
-
   isSale?: boolean;
+
+  newArrival?: boolean;
 }
