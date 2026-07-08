@@ -54,7 +54,7 @@ export default function CollectionHero() {
               text-jungle
             "
           >
-            Summer Collection 2026
+            All Year Collection 2026
           </span>
 
           <h1
@@ -90,7 +90,7 @@ export default function CollectionHero() {
             craftsmanship, comfort and effortless style.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-5">
+          {/* <div className="mt-10 flex flex-wrap gap-5">
             <button
               className="
                 flex
@@ -131,11 +131,11 @@ export default function CollectionHero() {
             >
               Explore Collections
             </button>
-          </div>
+          </div> */}
 
           {/* Collection Stats */}
 
-          <div className="mt-14 flex flex-wrap gap-10">
+          <div className="mt-14 flex gap-10">
             <div>
               <h3 className="text-3xl font-light text-charcoal">
                 250+

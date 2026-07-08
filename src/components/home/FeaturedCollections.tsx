@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import image17 from "../../gallery/ChatGPT Image Jul 2, 2026, 12_23_01 PM.png";
 import image23 from "../../gallery/womens cloth.png";
 import image4 from "../../gallery/accessories.jpg";
@@ -149,7 +150,8 @@ export default function FeaturedCollections() {
                 {collections[0].description}
               </p>
 
-              <button
+              <Link to="/shop-collection">
+                    <button
                 className="
                   mt-6
                   flex
@@ -168,6 +170,7 @@ export default function FeaturedCollections() {
                 Explore Collection
                 <ArrowRight size={18} />
               </button>
+              </Link>
             </div>
           </article>
 

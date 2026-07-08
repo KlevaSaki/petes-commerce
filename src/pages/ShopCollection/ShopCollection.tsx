@@ -18,9 +18,9 @@ import { products } from "../../data/products";
 export default function ShopCollection() {
   return (
     <main className="bg-cream">
-      <CollectionHero />
-
       <FilterBar />
+      
+      <CollectionHero />
 
       <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-8">
         <CategoryCards />
