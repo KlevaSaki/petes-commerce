@@ -7,7 +7,7 @@ export const womensProducts: Product[] = [
     id: "1",
     slug: "Classic Converse",
     name: "Classic Converse",
-    price: 3500,
+    price: 5000,
     category: "Menswear",
     image: image20,
     gender: "Women"
@@ -16,7 +16,7 @@ export const womensProducts: Product[] = [
     id: "3",
     slug: "Luxury Converse",
     name: "Luxury Converse",
-    price: 4000,
+    price: 5000,
     category: "Accessories",
     image: image22,
     gender: "Women"

@@ -6,7 +6,7 @@ export const mensProducts: Product[] = [
     id: "2",
     slug: "Tailored Converse",
     name: "Tailored Converse",
-    price: 3000,
+    price: 5000,
     category: "Menswear",
     image: image21,
     gender: "Men"

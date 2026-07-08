@@ -6,7 +6,7 @@ export const accessories: Product[] = [
     id: "4",
     slug: "Premium Converse",
     name: "Premium Converse",
-    price: 3400,
+    price: 5000,
     category: "Accessories",
     image: image23,
     gender: "Unisex"
