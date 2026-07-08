@@ -114,7 +114,7 @@ export default function Hero() {
                 sm:flex-row
               "
             >
-              <Link to="/shop-collection">
+              <Link to="/all-products">
                     <button
                       className="
                         flex
@@ -130,7 +130,7 @@ export default function Hero() {
                         hover:scale-[1.02]
                       "
                     >
-                      Shop Collection
+                      Shop All Products
 
                       <ArrowRight size={18} />
                     </button>

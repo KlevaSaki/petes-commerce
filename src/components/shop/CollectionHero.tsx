@@ -137,7 +137,7 @@ export default function CollectionHero() {
 
           <div className="mt-14 flex gap-10">
             <div>
-              <h3 className="text-3xl font-light text-charcoal">
+              <h3 className="text-2xl font-light text-charcoal">
                 250+
               </h3>
 
@@ -147,7 +147,7 @@ export default function CollectionHero() {
             </div>
 
             <div>
-              <h3 className="text-3xl font-light text-charcoal">
+              <h3 className="text-2xl font-light text-charcoal">
                 30+
               </h3>
 
@@ -157,7 +157,7 @@ export default function CollectionHero() {
             </div>
 
             <div>
-              <h3 className="text-3xl font-light text-charcoal">
+              <h3 className="text-2xl font-light text-charcoal">
                 4.9★
               </h3>
 

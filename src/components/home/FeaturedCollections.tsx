@@ -1,264 +1,312 @@
+import {
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+
 import image17 from "../../gallery/ChatGPT Image Jul 2, 2026, 12_23_01 PM.png";
 import image23 from "../../gallery/womens cloth.png";
 import image4 from "../../gallery/accessories.jpg";
 
 /**
  * Featured Collections
+ *
+ * Editorial scroll experience.
+ * The active collection is detected
+ * using IntersectionObserver.
  */
 
 const collections = [
   {
     id: 1,
     title: "Menswear",
-    description: "Tailored essentials crafted for timeless style.",
+    description:
+      "Tailored essentials crafted for timeless style.",
     image: image17,
   },
   {
     id: 2,
     title: "Womenswear",
-    description: "Modern silhouettes designed with elegance.",
+    description:
+      "Modern silhouettes designed with elegance.",
     image: image23,
   },
   {
     id: 3,
     title: "Accessories",
-    description: "Refined finishing touches for every occasion.",
+    description:
+      "Refined finishing touches for every occasion.",
     image: image4,
   },
 ];
 
 export default function FeaturedCollections() {
+  const [activeCollection, setActiveCollection] =
+    useState(1);
+
+  const cardRefs =
+    useRef<(HTMLElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = Number(
+                entry.target.getAttribute("data-id")
+              );
+
+              setActiveCollection(id);
+            }
+          });
+        },
+        {
+          threshold: 0.6,
+          rootMargin: "-20% 0px -20% 0px",
+        }
+      );
+
+    cardRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="rounded-[20px] bg-linear-to-b from-cream to-white px-4 py-12">
-      <section className="py-28">
-        {/* Section Header */}
+    <section className="rounded-[20px] bg-gradient-to-b from-cream to-white px-4 py-20">
+      {/* Header */}
 
-        <div className="mb-16 text-center">
-          <span
-            className="
-              text-xs
-              uppercase
-              tracking-[0.25rem]
-              text-jungle
-            "
-          >
-            Curated Collections
-          </span>
-
-          <h2
-            className="
-              mt-4
-              text-4xl
-              font-light
-              tracking-tight
-              md:text-6xl
-            "
-          >
-            Discover Your Style
-          </h2>
-
-          <p
-            className="
-              mx-auto
-              mt-6
-              max-w-2xl
-              text-neutral-500
-            "
-          >
-            Carefully selected collections designed to blend luxury,
-            versatility and timeless appeal.
-          </p>
-        </div>
-
-        {/* Layout */}
-
-        <div
+      <div className="mx-auto mb-24 max-w-3xl text-center">
+        <span
           className="
-            grid
-            gap-6
-            lg:grid-cols-3
+            text-xs
+            uppercase
+            tracking-[0.25rem]
+            text-jungle
           "
         >
-          {/* Large Collection */}
+          Curated Collections
+        </span>
 
-          <article
-            className="
-              group
-              relative
-              overflow-hidden
-              rounded-[32px]
-              lg:col-span-2
-            "
-          >
-            <div className="h-[650px] w-full overflow-hidden">
-              <img
-                src={collections[0].image}
-                alt={collections[0].title}
-                className="
-                  h-full
-                  w-full
-                  object-contain
-                  object-center
-                  transition-transform
-                  duration-700
-                  group-hover:scale-105
-                "
-              />
-            </div>
+        <h2
+          className="
+            mt-5
+            text-5xl
+            font-light
+            tracking-tight
+            md:text-6xl
+          "
+        >
+          Discover Your Style
+        </h2>
 
-            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
+        <p
+          className="
+            mx-auto
+            mt-6
+            max-w-2xl
+            text-lg
+            leading-8
+            text-neutral-500
+          "
+        >
+          Carefully selected collections designed
+          to blend luxury, versatility and timeless
+          appeal.
+        </p>
+      </div>
 
-            <div
-              className="
-                absolute
-                bottom-0
-                left-0
-                p-8
-                text-white
-                md:p-10
-              "
+      {/* Collections */}
+
+      <div className="mx-auto flex max-w-7xl flex-col gap-24">
+        {collections.map((collection, index) => {
+          const active =
+            activeCollection === collection.id;
+
+          return (
+            <article
+              key={collection.id}
+              data-id={collection.id}
+              ref={(el) => {
+                cardRefs.current[index] = el;
+              }}
+              className={`
+                group
+                grid
+                items-center
+                gap-12
+                rounded-[40px]
+                transition-all
+                duration-700
+                lg:grid-cols-2
+
+                ${
+                  index % 2 === 1
+                    ? "lg:[&>*:first-child]:order-2"
+                    : ""
+                }
+
+                ${
+                  active
+                    ? "scale-[1.02] shadow-[0_40px_80px_rgba(15,61,46,0.12)]"
+                    : "opacity-80"
+                }
+              `}
             >
-              <span
-                className="
-                  rounded-full
-                  bg-white/15
-                  px-4
-                  py-2
-                  text-xs
-                  uppercase
-                  tracking-[0.2rem]
-                  backdrop-blur-md
-                "
-              >
-                Featured
-              </span>
+              {/* Image */}
 
-              <h3
-                className="
-                  mt-5
-                  text-4xl
-                  font-light
-                  md:text-5xl
-                "
-              >
-                {collections[0].title}
-              </h3>
+              <div className="overflow-hidden rounded-[36px]">
+                <img
+                  src={collection.image}
+                  alt={collection.title}
+                  className={`
+                    aspect-[4/5]
+                    w-full
+                    object-cover
+                    transition-all
+                    duration-700
 
-              <p className="mt-4 max-w-md text-white/80">
-                {collections[0].description}
-              </p>
+                    ${
+                      active
+                        ? "scale-105"
+                        : "scale-100"
+                    }
+                  `}
+                />
+              </div>
 
-              <Link to="/shop-collection">
-                    <button
-                className="
-                  mt-6
-                  flex
-                  items-center
-                  gap-2
-                  rounded-full
-                  bg-jungle
-                  px-6
-                  py-3
-                  text-sm
-                  font-medium
-                  transition
-                  hover:opacity-90
-                "
-              >
-                Explore Collection
-                <ArrowRight size={18} />
-              </button>
-              </Link>
-            </div>
-          </article>
+              {/* Content */}
 
-          {/* Right Column */}
-
-          <div className="flex flex-col gap-6">
-            {collections.slice(1).map((collection) => (
-              <article
-                key={collection.id}
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-[32px]
-                "
-              >
-                <div className="h-[312px] w-full overflow-hidden">
-                  <img
-                    src={collection.image}
-                    alt={collection.title}
-                    className="
-                      h-full
-                      w-full
-                      object-cover
-                      object-center
-                      transition-transform
-                      duration-700
-                      group-hover:scale-105
-                    "
-                  />
-                </div>
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-
-                <div
+              <div className="px-2 lg:px-8">
+                <span
                   className="
-                    absolute
-                    bottom-0
-                    left-0
-                    right-0
-                    p-6
-                    text-white
+                    rounded-full
+                    border
+                    border-jungle/15
+                    bg-jungle/5
+                    px-4
+                    py-2
+                    text-xs
+                    uppercase
+                    tracking-[0.25rem]
+                    text-jungle
                   "
                 >
-                  <h3
-                    className="
-                      text-2xl
-                      font-light
-                    "
-                  >
-                    {collection.title}
-                  </h3>
+                  {index === 0
+                    ? "Featured"
+                    : "Collection"}
+                </span>
 
-                  <p
-                    className="
-                      mt-2
-                      text-sm
-                      text-white/80
-                    "
-                  >
-                    {collection.description}
-                  </p>
+                <h3
+                  className={`
+                    mt-8
+                    font-light
+                    tracking-tight
+                    transition-all
+                    duration-500
 
-                  <div
-                    className="
-                      mt-4
+                    ${
+                      active
+                        ? "text-6xl"
+                        : "text-5xl"
+                    }
+                  `}
+                >
+                  {collection.title}
+                </h3>
+
+                <p className="mt-6 max-w-lg text-lg leading-8 text-neutral-500">
+                  {collection.description}
+                </p>
+
+                <Link to="/shop-collection">                  <button
+                    className={`
+                      mt-10
                       inline-flex
                       items-center
-                      gap-2
+                      gap-3
+                      rounded-full
+                      px-8
+                      py-4
                       text-sm
                       font-medium
-                    "
+                      transition-all
+                      duration-500
+
+                      ${
+                        active
+                          ? "scale-110 bg-jungle text-white shadow-xl shadow-jungle/30"
+                          : "bg-white text-charcoal border border-neutral-200 hover:border-jungle hover:text-jungle"
+                      }
+                    `}
                   >
-                    Explore
+                    Explore Collection
+
                     <ArrowRight
-                      size={16}
-                      className="
-                        transition-transform
-                        group-hover:translate-x-1
-                      "
+                      size={18}
+                      className={`
+                        transition-all
+                        duration-500
+
+                        ${
+                          active
+                            ? "translate-x-1"
+                            : ""
+                        }
+                      `}
                     />
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+                  </button>
+                </Link>
+
+                {/* Decorative Divider */}
+
+                <div
+                  className={`
+                    mt-10
+                    h-[2px]
+                    rounded-full
+                    bg-gradient-to-r
+                    from-jungle
+                    to-transparent
+                    transition-all
+                    duration-700
+
+                    ${
+                      active
+                        ? "w-36 opacity-100"
+                        : "w-20 opacity-40"
+                    }
+                  `}
+                />
+              </div>
+            </article>
+          );
+        })}
+      </div>
+
+      {/* Bottom Decorative Blur */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-1/2
+          top-1/2
+          -z-10
+          h-[700px]
+          w-[700px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+          bg-jungle/5
+          blur-3xl
+        "
+      />
     </section>
   );
 }
