@@ -11,6 +11,7 @@ export const products: Product[] = [
     price: 3500,
     category: "Menswear",
     image: image20,
+    gender: "Women"
   },
   {
     id: "2",
@@ -18,6 +19,7 @@ export const products: Product[] = [
     price: 3000,
     category: "Menswear",
     image: image21,
+    gender: "Men"
   },
   {
     id: "3",
@@ -25,6 +27,7 @@ export const products: Product[] = [
     price: 4000,
     category: "Accessories",
     image: image22,
+    gender: "Women"
   },
   {
     id: "4",
@@ -32,5 +35,6 @@ export const products: Product[] = [
     price: 3400,
     category: "Womenswear",
     image: image23,
+    gender: "Unisex"
   },
 ];

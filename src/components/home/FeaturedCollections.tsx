@@ -26,6 +26,7 @@ const collections = [
     description:
       "Tailored essentials crafted for timeless style.",
     image: image17,
+    link: "/menswear-collection"
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ const collections = [
     description:
       "Modern silhouettes designed with elegance.",
     image: image23,
+    link: "/womenswear-collection"
   },
   {
     id: 3,
@@ -40,6 +42,7 @@ const collections = [
     description:
       "Refined finishing touches for every occasion.",
     image: image4,
+    link: "/accessories-collection"
   },
 ];
 
@@ -202,7 +205,7 @@ export default function FeaturedCollections() {
                   {collection.description}
                 </p>
 
-                <Link to="/shop-collection">                  <button
+                <Link to={collection.link}>                  <button
                     className={`
                       mt-10
                       inline-flex
