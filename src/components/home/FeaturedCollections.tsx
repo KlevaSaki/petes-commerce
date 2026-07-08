@@ -81,7 +81,7 @@ export default function FeaturedCollections() {
     <section className="rounded-[20px] bg-gradient-to-b from-cream to-white px-4 py-20">
       {/* Header */}
 
-      <div className="mx-auto mb-24 max-w-3xl text-center">
+      <div className="mx-auto mb-24 text-center">
         <span
           className="
             text-xs
@@ -123,7 +123,7 @@ export default function FeaturedCollections() {
 
       {/* Collections */}
 
-      <div className="mx-auto flex max-w-7xl flex-col gap-24">
+      <div className="mx-auto flex flex-col gap-24">
         {collections.map((collection, index) => {
           const active =
             activeCollection === collection.id;
@@ -141,21 +141,10 @@ export default function FeaturedCollections() {
                 items-center
                 gap-12
                 rounded-[40px]
-                transition-all
-                duration-700
+                transition-opacity
+                duration-500
                 lg:grid-cols-2
-
-                ${
-                  index % 2 === 1
-                    ? "lg:[&>*:first-child]:order-2"
-                    : ""
-                }
-
-                ${
-                  active
-                    ? "scale-[1.02] shadow-[0_40px_80px_rgba(15,61,46,0.12)]"
-                    : "opacity-80"
-                }
+                
               `}
             >
               {/* Image */}
@@ -168,14 +157,10 @@ export default function FeaturedCollections() {
                     aspect-[4/5]
                     w-full
                     object-cover
-                    transition-all
+                    transition-transform
                     duration-700
+                    group-hover:scale-105
 
-                    ${
-                      active
-                        ? "scale-105"
-                        : "scale-100"
-                    }
                   `}
                 />
               </div>
@@ -205,16 +190,9 @@ export default function FeaturedCollections() {
                 <h3
                   className={`
                     mt-8
+                    text-4xl
                     font-light
                     tracking-tight
-                    transition-all
-                    duration-500
-
-                    ${
-                      active
-                        ? "text-6xl"
-                        : "text-5xl"
-                    }
                   `}
                 >
                   {collection.title}
@@ -240,7 +218,7 @@ export default function FeaturedCollections() {
 
                       ${
                         active
-                          ? "scale-110 bg-jungle text-white shadow-xl shadow-jungle/30"
+                          ? "bg-jungle text-white scale-110 shadow-xl shadow-jungle/30"
                           : "bg-white text-charcoal border border-neutral-200 hover:border-jungle hover:text-jungle"
                       }
                     `}
